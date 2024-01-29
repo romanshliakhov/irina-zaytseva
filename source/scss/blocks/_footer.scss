@@ -1,0 +1,25 @@
+.footer {
+  padding: 30px 0;
+  background-color: var(--color-black);
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 78px;
+
+    a {
+      font-size: 17px;
+      line-height: 129%;
+      color: var(--color-white);
+    }
+  }
+}
+
+
+
+
+
+
+
+

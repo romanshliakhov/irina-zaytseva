@@ -1,0 +1,40 @@
+.mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: var(--color-white);
+  z-index: 10;
+  overflow: hidden;
+  border-bottom-left-radius: 100%;
+  transition: 0.3s ease;
+
+  &.active {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0;
+
+    .header__nav,
+    .header__lang {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__menu {
+    padding: 120px 32px clamp(32px, 4.883vw, 50px);
+    width: 100%;
+    flex: 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .header__nav,
+    .header__lang {
+      opacity: 0;
+      display: flex;
+    }
+  }
+}

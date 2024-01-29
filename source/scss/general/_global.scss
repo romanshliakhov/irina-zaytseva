@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: var(--font-family-exo);
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-black);
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  display: inline-flex;
+  color: currentColor;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  color: currentColor;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+picture {
+  display: inline-flex;
+}
+
+fieldset {
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+label {
+  display: block;
+  position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+svg {
+  fill: transparent;
+}
+
+.body-scroll {
+  position: fixed;
+  overflow-y: hidden;
+}
+
+
+
+

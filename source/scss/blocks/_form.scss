@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 20px;
+
+  &__label {
+    position: relative;
+    padding: 22px 29px;
+    display: flex;
+    align-items: center;
+    grid-gap: 6px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    border: 1px solid var(--color-blue);
+
+    .icon {
+      display: flex;
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+  }
+
+  input {
+    font-size: 18px;
+    line-height: 122%;
+    color: var(--color-black);
+    border-radius: 10px;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 122%;
+      color: var(--color-black);
+    }
+  }
+}

@@ -1,6 +1,8 @@
 .made {
+  margin-top: -70px;
   margin-bottom: 70px;
   position: relative;
+  z-index: 2;
 
   &__bg {
     position: absolute;
@@ -22,10 +24,6 @@
     background-color: var(--color-white);
     border-radius: 20px;
     filter: drop-shadow(0px 0px 54px rgba(0, 0, 0, 0.02));
-  }
-
-  &__title {
-
   }
 
   &__details {

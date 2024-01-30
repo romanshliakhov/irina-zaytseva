@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  // padding-bottom: 40px;
+
+  .container {
+    max-width: 1420px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/banner-left.png);
+    background-repeat: no-repeat;
+    inset: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/banner-right.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    right: 0;
+    bottom: 0;
+    width: 546px;
+    height: 628px;
+  }
+
+  &__wrapp {
+    min-height: 850px;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
+    display: grid;
+    grid-template-columns: 830px 1fr;
+    z-index: 2;
+  }
+
+  &__details {
+    // max-width: 830px;
+    // width: 100%;
+    padding-top: 70px;
+  }
+
+  &__head {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 40px;
+
+    &-item {
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      grid-gap: 10px;
+      background-color: var(--color-white);
+      border: 1px solid var(--color-blue-light);
+      border-radius: 10px;
+    }
+
+    &-icon {
+      margin-left: -34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 56px;
+      background-color: var(--color-blue);
+    }
+
+    &-text {
+      span {
+        color: var(--color-blue);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 27px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 23px;
+  }
+
+  &__title {
+    span {
+      color: var(--color-blue);
+    }
+  }
+
+  &__descr {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+
+    &-icon {
+      display: flex;
+    }
+
+    svg {
+      fill: var(--color-blue);
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 129%;
+
+      span {
+        color: var(--color-blue);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__image {
+    height: 100%;
+    display: flex;
+    width: 100%;
+
+    picture,
+    img {
+      max-width: initial;
+      width: 100%;
+      height: 100%;
+      object-fit: initial;
+    }
+  }
+
+  &__status {
+    position: absolute;
+  }
+
+  &__bottom {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 410px;
+    grid-gap: 20px;
+  }
+}

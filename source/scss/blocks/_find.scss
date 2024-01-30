@@ -1,5 +1,7 @@
 .find {
+  position: relative;
   margin-bottom: 70px;
+  z-index: 2;
 
   &__wrapp {
     display: flex;

@@ -12,6 +12,11 @@
       font-size: 17px;
       line-height: 129%;
       color: var(--color-white);
+      transition: all 0.4s ease;
+
+      &:hover {
+        color: var(--color-blue);
+      }
     }
   }
 }

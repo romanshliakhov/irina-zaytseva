@@ -4,9 +4,9 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  font-family: var(--font-family-exo);
-  font-size: 16px;
-  line-height: 22px;
+  font-family: var(--font-family-mulish);
+  font-size: 17px;
+  line-height: 110%;
   color: var(--color-black);
 }
 
@@ -117,6 +117,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  background-color: var(--color-bg);
 }
 
 .main {

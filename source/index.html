@@ -1,16 +1,372 @@
 <!DOCTYPE html>
 <html lang="En">
-@include('partials/head.html',{})
+@include('partials/head.html')
 
 <body>
   <div class="wrapper">
     <main class="main">
       <section>
-        Start project
+        hero
+      </section>
+
+      <section class="made">
+        <div class="made__bg">
+          <picture>
+            <source type='image/webp' srcset='img/bg-1.webp'>
+            <img width='1920' height='1080' src='img/bg-1.png' alt=''>
+          </picture>
+        </div>
+
+        <div class="container">
+          <div class="made__wrapp">
+            <h2 class="made__title">Этот мастер-класс создан для тебя, если ты:</h2>
+
+            <ul class="made__details">
+              <li class="made__detail">
+                <div class="made__detail-head">
+                  <picture>
+                    <source type='image/webp' srcset='img/content/item1.webp'>
+                    <img width='380' height='200' src='img/content/item1.png' alt=''>
+                  </picture>
+
+                  <div class="made__detail-icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#star'></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="made__detail-info">
+                  <span>Ты в отношениях</span>
+                  <p>Но в них нет яркости, огня, а главное — перспективы на будущее</p>
+                </div>
+              </li>
+              <li class="made__detail">
+                <div class="made__detail-head">
+                    <picture>
+                      <source type='image/webp' srcset='img/content/item2.webp'>
+                      <img width='380' height='200' src='img/content/item2.png' alt=''>
+                    </picture>
+
+                    <div class="made__detail-icon">
+                      <svg width='26' height='26'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="made__detail-info">
+                    <span>Ты свободна</span>
+                    <p>И никак не можешь встретить любимого и любящего мужчину для создания семьи</p>
+                  </div>
+              </li>
+              <li class="made__detail">
+                <div class="made__detail-head">
+                  <picture>
+                    <source type='image/webp' srcset='img/content/item3.webp'>
+                    <img width='380' height='200' src='img/content/item3.png' alt=''>
+                  </picture>
+
+                  <div class="made__detail-icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#star'></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="made__detail-info">
+                  <span>Ты обжигалась</span>
+                  <p>И в прошлых отношениях мужчины просто морочили тебе голову</p>
+                </div>
+              </li>
+              <li class="made__detail">
+                <div class="made__detail-head">
+                  <picture>
+                    <source type='image/webp' srcset='img/content/item4.webp'>
+                    <img width='380' height='200' src='img/content/item4.png' alt=''>
+                  </picture>
+
+                  <div class="made__detail-icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#star'></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="made__detail-info">
+                  <span>Ты не знаешь</span>
+                  <p>Как найти серьезного достойного мужчину и чем его привлечь для долгосрочных отношений</p>
+                </div>
+              </li>
+              <li class="made__detail">
+                <div class="made__detail-head">
+                  <picture>
+                    <source type='image/webp' srcset='img/content/item5.webp'>
+                    <img width='380' height='200' src='img/content/item5.png' alt=''>
+                  </picture>
+
+                  <div class="made__detail-icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#star'></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="made__detail-info">
+                  <span>Ты устала</span>
+                  <p>От мужчин, которым нужен только с*екс и отношения без обязательств</p>
+                </div>
+              </li>
+              <li class="made__detail">
+                <div class="made__detail-head">
+                  <picture>
+                    <source type='image/webp' srcset='img/content/item6.webp'>
+                    <img width='380' height='200' src='img/content/item6.png' alt=''>
+                  </picture>
+
+                  <div class="made__detail-icon">
+                    <svg width='26' height='26'>
+                      <use href='img/sprite/sprite.svg#star'></use>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="made__detail-info">
+                  <span>Ты застряла</span>
+                  <p>В «пустых» отношениях, кажется, что ты топчишься на месте</p>
+                </div>
+              </li>
+            </ul>
+
+            <button class="btn">
+              <span>Хочу отношения мечты</span>
+
+              <span>
+                <svg width='56' height='56'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="find">
+        <div class="container">
+          <div class="find__wrapp">
+            <h2 class="find__title">На мастер-классе ты откроешь для себя:</h2>
+
+            <ul class="find__details">
+              <li class="find__detail">
+                <span>
+                  <svg width='27' height='35'>
+                    <use href='img/sprite/sprite.svg#find-icon-1'></use>
+                  </svg>
+                </span>
+                <p>Почему тебе все время попадаются мужчины, которые либо тебе неинтересны, либо женатые?</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='35' height='18'>
+                    <use href='img/sprite/sprite.svg#find-icon-2'></use>
+                  </svg>
+                </span>
+                <p>Как распознать и не упустить достойного мужчину, чтобы построить с ним крепкие и долгосрочные отношения</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='27' height='30'>
+                    <use href='img/sprite/sprite.svg#find-icon-3'></use>
+                  </svg>
+                </span>
+                <p>Как избежать несерьезных кандидатов и любителей мимолетных развлечений</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='30' height='30'>
+                    <use href='img/sprite/sprite.svg#find-icon-4'></use>
+                  </svg>
+                </span>
+                <p>Ты узнаешь, почему иногда ты отдаешь слишком много, не получая взамен равной отдачи, и как это исправить</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='33' height='31'>
+                    <use href='img/sprite/sprite.svg#find-icon-5'></use>
+                  </svg>
+                </span>
+                <p>Ты поймешь, какие женские ошибки чаще всего приводят к расставанию, и как их избежать.</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='33' height='29'>
+                    <use href='img/sprite/sprite.svg#find-icon-6'></use>
+                  </svg>
+                </span>
+                <p>Ты научишься уверенно обходить самые сложные моменты в общении с мужчиной, укрепляя и углубляя ваши отношения</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='30' height='30'>
+                    <use href='img/sprite/sprite.svg#find-icon-7'></use>
+                  </svg>
+                </span>
+                <p>Ты поймешь, как внести в отношения перчинку и легкость, чтобы наслаждаться любовью, вниманием и заботой своего мужчины долгие-долгие годы</p>
+              </li>
+              <li class="find__detail">
+                <span>
+                  <svg width='25' height='25'>
+                    <use href='img/sprite/sprite.svg#star'></use>
+                  </svg>
+                </span>
+                <p>В итоге — ты получишь план, как найти того единственного и правильного мужчину, избегая тех, кто играет с чувствами и оставляет лишь следы разбитых сердец и утраченных женских надежд на счастье </p>
+              </li>
+            </ul>
+
+            <button class="btn">
+              <span>Хочу отношения мечты</span>
+
+              <span>
+                <svg width='56' height='56'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container">
+          <div class="about__wrapp">
+            <div class="about__info">
+              <div class="about__info-image">
+                <picture>
+                  <source type='image/webp' srcset='img/irina-about.webp'>
+                  <img width='343' height='676' src='img/irina-about.png' alt=''>
+                </picture>
+              </div>
+
+              <div class="about__info-block">
+                <div class="about__info-name">Ирина Зайцева</div>
+
+                <blockquote class="about__info-quote">
+                  <p>Я раскрою тебе секреты, проверенные мной лично. Ведь каждый из них — это путь, который я сама прошла, и теперь готова поделиться с тобой</p>
+                </blockquote>
+
+                <ul class="about__info-details">
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Не просто теоретик, но и практик:</strong> любимая женщина и счастливая мама</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Личный наставник и коуч в сфере</strong> любви и отношений</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Автор популярного блога,</strong> посвященного вопросам отношений и женственности</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Основательница международного проекта</strong> «Академия Женской Мудрости»</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Создательница тренингов:</strong> "Привлечение Единственного" и "От знакомства до замужества"</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Победительница конкурса красоты</strong> среди замужних женщин <br> Миссис Украина – Вселенная в 2015</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Регулярный эксперт на ведущих ТВ каналах</strong> и на женских конференциях</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Одна из ТОП 500</strong> влиятельных женщин Украины по версии журнала “Woman” в 2018</p>
+                  </li>
+
+                  <li>
+                    <span>
+                      <svg width='16' height='16'>
+                        <use href='img/sprite/sprite.svg#star'></use>
+                      </svg>
+                    </span>
+
+                    <p><strong>Заместитель директора школы</strong> Леди в известном ТВ-шоу «Пацанки»</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button class="btn">
+              <span>Зарегистрироваться на<br> бесплатный мастер-класс»</span>
+
+              <span>
+                <svg width='56' height='56'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        hero bottom
       </section>
     </main>
 
-    @include('partials/footer.html',{})
+    @include('partials/footer.html')
   </div>
 
   <script type="text/javascript" src="js/main.js"></script>

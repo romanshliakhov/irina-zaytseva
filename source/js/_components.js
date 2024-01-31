@@ -5,6 +5,7 @@
 // import './components/mobileMenu.js';
 // import './components/replaceEl.js';
 // import './components/seoBlock.js';
+import './components/timer';
 
 
 

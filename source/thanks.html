@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="En">
+@include('partials/head.html')
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      <section class="thanks">
+        <div class="container">
+          <div class="thanks__wrapp">
+            <div class="thanks__details">
+              <div class="thanks__head">
+                <svg width='690' height='40'>
+                  <use href='img/sprite/sprite.svg#ready'></use>
+                </svg>
+              </div>
+
+              <h1 class="thanks__title">Ты всего в одном шаге от участия в мастер-классе<br><span>от Ирины Зайцевой!</span></h1>
+
+              <div class="thanks__descr">
+                <div class="thanks__descr-icon">
+                  <svg width='30' height='30'>
+                    <use href='img/sprite/sprite.svg#star'></use>
+                  </svg>
+                </div>
+
+                <p><span>Переходи в Telegram,</span> чтобы забрать свой видео бонус от Ирины. А также получи ссылку на мастер-класс, который изменит твою жизнь</p>
+              </div>
+
+              <div class="thanks__bottom">
+                <a class="btn" href="#">
+                  <span>Забрать бонус в Telegram</span>
+
+                  <span>
+                    <svg width='56' height='56'>
+                      <use href='img/sprite/sprite.svg#telegram'></use>
+                    </svg>
+                  </span>
+                </a>
+
+                <div class="bonus">
+                  <div class="bonus__info">
+                    <div class="bonus__banner">
+                      <picture>
+                        <source type='image/webp' srcset='img/pdf.webp'>
+                        <img width='140' height='190' src='img/pdf.png' alt='7 запретных тем на свидании с мужчиной мечты, которые станут причиной расставания'>
+                      </picture>
+                    </div>
+
+                    <p class="bonus__descr"><span>Бонус за регистрацию:</span> 7 запретных тем на свидании с мужчиной мечты, которые станут причиной расставания</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="thanks__box">
+              <div class="thanks__image">
+                <picture>
+                  <source type='image/webp' srcset='img/irina.webp'>
+                  <img width='750' height='960' src='img/irina.png' alt=''>
+                </picture>
+              </div>
+
+              <div class="hero__status">
+                <p><strong>Ирина Зайцева</strong> <span>В ТОП-500</span> влиятельных женщин Украины по версии журнала “Woman”</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

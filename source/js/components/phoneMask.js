@@ -1,46 +1,57 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-const form = document.querySelector('.form');
-const telSelector = form.querySelector('input[type="tel"]');
-const inputMask = new Inputmask('+38 999 999-99-99');
-inputMask.mask(telSelector);
+export const validateForms = (selector, rules, afterSend) => {
+  const form = document?.querySelector(selector);
+  const telSelector = form?.querySelector('input[type="tel"]');
 
-new window.JustValidate('.form', {
-  rules: {
-    tel: {
-      required: true,
-      function: () => {
-        const phone = telSelector.inputmask.unmaskedvalue();
-        return Number(phone) && phone.length === 10;
+  if (!form) {
+    console.error('Нет такого селектора!');
+    return false;
+  }
+
+  if (!rules) {
+    console.error('Вы не передали правила валидации!');
+    return false;
+  }
+
+  if (telSelector) {
+    const inputMask = new Inputmask('+7 (___)___-__-__');
+    inputMask.mask(telSelector);
+
+    for (let item of rules) {
+      if (item.tel) {
+        item.rules.push({
+          rule: 'function',
+          validator: function() {
+            const phone = telSelector.inputmask.unmaskedvalue();
+            return phone.length === 10;
+          },
+          errorMessage: item.telError
+        });
       }
     }
-  },
-  colorWrong: '#ff0f0f',
-  messages: {
-    name: {
-      required: 'Введите имя',
-      minLength: 'Введите 3 и более символов',
-      maxLength: 'Запрещено вводить более 15 символов'
-    },
-    email: {
-      email: 'Введите корректный email',
-      required: 'Введите email'
-    },
-    tel: {
-      required: 'Введите телефон',
-      function: 'Здесь должно быть 10 символов без +7'
-    }
-  },
-  submitHandler: function(thisForm) {
-    let formData = new FormData(thisForm);
+  }
+
+  const validation = new JustValidate(selector);
+
+  for (let item of rules) {
+    validation
+      .addField(item.ruleSelector, item.rules);
+  }
+
+  validation.onSuccess((ev) => {
+    let formData = new FormData(ev.target);
 
     let xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          console.log('Отправлено');
+          if (afterSend) {
+            afterSend();
+          }
+          console.log('status 200');
         }
       }
     }
@@ -48,6 +59,36 @@ new window.JustValidate('.form', {
     xhr.open('POST', 'mail.php', true);
     xhr.send(formData);
 
-    thisForm.reset();
-  }
-})
+    ev.target.reset();
+  })
+
+};
+
+const rules1 = [
+  {
+      ruleSelector: '.email',
+      rules: [
+          {
+              rule: 'minLength',
+              value: 3,
+              errorMessage: 'The field must contain at least 3 characters'
+          },
+          {
+              rule: 'required',
+              value: true,
+              errorMessage: 'Enter your email!'
+          },
+          {
+              rule: 'email',
+              value: true,
+              errorMessage: 'Enter correct email!'
+          }
+      ]
+  },
+];
+
+const afterForm = () => {
+  console.log('Произошла отправка, тут можно писать любые действия');
+};
+
+validateForms('.form', rules1, afterForm);

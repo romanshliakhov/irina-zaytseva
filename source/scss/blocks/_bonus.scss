@@ -1,0 +1,42 @@
+.bonus {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+
+  &__info {
+    position: relative;
+    max-width: 380px;
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: flex-end;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+    p {
+      max-width: 250px;
+      font-size: 15px;
+      color: var(--color-white);
+
+      span {
+        display: block;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__banner {
+    position: absolute;
+    left: -30px;
+    bottom: -10px;
+  }
+
+  &__timer {
+    margin-left: 120px;
+    width: fit-content;
+  }
+}

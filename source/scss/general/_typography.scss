@@ -11,6 +11,10 @@ h2 {
   font-weight: 800;
   text-align: center;
 
+  span {
+    color: var(--color-blue);
+  }
+
   @media screen and (max-width: 768px) {
     font-size: clamp(28px, 4.688vw, 36px);
   }

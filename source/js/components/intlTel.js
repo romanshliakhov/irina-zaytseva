@@ -7,7 +7,6 @@ if(input) {
       countrySearch: false,
       defaultCountry: "ua",
       initialCountry: "auto",
-      // preferredCountries: ["ua", 'az', 'am', 'by', 'kz', 'kg', 'md', 'tj', 'uz', 'tm', 'ge', "ru",],
       autoPlaceholder: 'aggressive',
       nationalMode: false,
       customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {

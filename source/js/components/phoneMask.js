@@ -5,23 +5,23 @@ export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
-  if (telSelector) {
-    const inputMask = new Inputmask();
-    inputMask.mask(telSelector);
+  // if (telSelector) {
+  //   const inputMask = new Inputmask();
+  //   inputMask.mask(telSelector);
 
-    for (let item of rules) {
-      if (item.tel) {
-        item.rules.push({
-          rule: 'function',
-          validator: function() {
-            const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 10;
-          },
-          errorMessage: item.telError
-        });
-      }
-    }
-  }
+  //   for (let item of rules) {
+  //     if (item.tel) {
+  //       item.rules.push({
+  //         rule: 'function',
+  //         validator: function() {
+  //           const phone = telSelector.inputmask.unmaskedvalue();
+  //           return phone.length === 10;
+  //         },
+  //         errorMessage: item.telError
+  //       });
+  //     }
+  //   }
+  // }
 
   const validation = new JustValidate(selector);
 
@@ -32,9 +32,9 @@ export const validateForms = (selector, rules, afterSend) => {
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
-    let formDialCode = document.querySelector('.iti__selected-dial-code').innerText;
-    let currentTel = formData.get('tel');
-    formData.set('tel', formDialCode + currentTel);
+    // let formDialCode = document.querySelector('.iti__selected-dial-code').innerText;
+    // let currentTel = formData.get('tel');
+    // formData.set('tel', formDialCode + currentTel);
 
     let xhr = new XMLHttpRequest();
 

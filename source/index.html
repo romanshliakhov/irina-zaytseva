@@ -6,6 +6,21 @@
   <div class="wrapper">
     <main class="main">
       <section class="hero">
+        <div class="hero__bg">
+          <div class="hero__bg-left">
+            <picture>
+              <source type='image/webp' srcset='img/banner-left.webp'>
+              <img width='1336' height='838' src='img/banner-left.png' alt=''>
+            </picture>
+          </div>
+
+          <div class="hero__bg-right">
+            <picture>
+              <source type='image/webp' srcset='img/banner-right.webp'>
+              <img width='576' height='591' src='img/banner-right.png' alt=''>
+            </picture>
+          </div>
+        </div>
         <div class="container">
           <div class="hero__wrapp">
             <div class="hero__details">
@@ -58,20 +73,14 @@
               <div class="hero__bottom">
                 <form class="form">
                   <label class="form__label">
-                    <input class="email" type="email" name="email" placeholder="Ваша почта">
+                    <input class="email" type="email" name="email" placeholder="Ваш email" require>
                   </label>
 
                   <label class="form__label">
-                    <span class="icon">
-                      <svg width='29' height='16'>
-                        <use href='img/sprite/sprite.svg#ukraine'></use>
-                      </svg>
-                    </span>
-
-                    <input class="tel" type="tel" name="tel" placeholder="+380">
+                    <input class="tel" type="tel" name="tel" id="tel" require>
                   </label>
 
-                  <button class="btn" type="sumbit">
+                  <button class="hero__btn btn" type="sumbit">
                     <span>Зарегистрироваться на<br> бесплатный мастер-класс»</span>
 
                     <span>
@@ -254,7 +263,7 @@
               </li>
             </ul>
 
-            <button class="btn">
+            <a class="btn anchor" href="#scroll">
               <span>Хочу отношения мечты</span>
 
               <span>
@@ -262,7 +271,7 @@
                   <use href='img/sprite/sprite.svg#arrow'></use>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -339,7 +348,7 @@
               </li>
             </ul>
 
-            <button class="btn">
+            <a class="find__btn btn anchor" href="#scroll">
               <span>Хочу отношения мечты</span>
 
               <span>
@@ -347,7 +356,7 @@
                   <use href='img/sprite/sprite.svg#arrow'></use>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -365,6 +374,8 @@
             <div class="about__info">
               <div class="about__info-image">
                 <picture>
+                  <source type='image/webp' media='(max-width: 767px)' width='177' height='248' srcset='img/irina-about-mob.webp'>
+                  <source media='(max-width: 767px)' srcset='img/irina-about-mob.png'>
                   <source type='image/webp' srcset='img/irina-about.webp'>
                   <img width='343' height='676' src='img/irina-about.png' alt=''>
                 </picture>
@@ -471,7 +482,7 @@
               </div>
             </div>
 
-            <button class="btn">
+            <a class="btn anchor" href="#scroll">
               <span>Зарегистрироваться на<br> бесплатный мастер-класс»</span>
 
               <span>
@@ -479,15 +490,15 @@
                   <use href='img/sprite/sprite.svg#arrow'></use>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="bottom">
+      <section class="bottom" id="scroll">
         <div class="container">
           <div class="hero__wrapp">
-            <div class="hero__details">
+            <div class="hero__details hero__details--bottom">
               <div class="hero__head">
                 <div class="hero__head-item">
                   <div class="hero__head-icon">
@@ -537,19 +548,14 @@
               <div class="hero__bottom">
                 <form class="form">
                   <label class="form__label">
-                    <input class="email" type="email" name="email" placeholder="Ваша почта">
+                    <input class="email" type="email" name="email" placeholder="Ваш email" require>
                   </label>
 
                   <label class="form__label">
-                    <span class="icon">
-                      <svg width='29' height='16'>
-                        <use href='img/sprite/sprite.svg#ukraine'></use>
-                      </svg>
-                    </span>
-                    <input class="tel" type="tel" name="tel" placeholder="+380">
+                    <input class="tel" type="tel" name="tel" id="tel" require>
                   </label>
 
-                  <button class="btn">
+                  <button class="hero__btn btn" type="sumbit">
                     <span>Зарегистрироваться на<br> бесплатный мастер-класс»</span>
 
                     <span>
@@ -595,7 +601,7 @@
                 </picture>
               </div>
 
-              <div class="hero__status">
+              <div class="hero__status hero__status--bottom">
                 <p><strong>Ирина Зайцева</strong> <span>В ТОП-500</span> влиятельных женщин Украины по версии журнала “Woman”</p>
               </div>
             </div>

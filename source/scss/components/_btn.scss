@@ -1,11 +1,12 @@
 .btn {
-  padding: 10px 10px 10px 25px;
+  padding: 5px 5px 5px 25px;
   border-radius: 10px;
   background-color: var(--color-blue);
   display: flex;
   align-items: center;
-  grid-gap: 16px;
-  font-size: 18px;
+  justify-content: space-between;
+  grid-gap: 23px;
+  font-size: clamp(17px, 2.344vw, 18px);
   line-height: 115%;
   font-weight: 700;
   color: var(--color-white);
@@ -13,6 +14,15 @@
   text-transform: uppercase;
   transition: all 0.4s ease;
   text-align: left;
+
+  @media screen and (max-width: 991px) {
+    font-size: clamp(15px, 2.214vw, 17px);
+  }
+
+  @media screen and (max-width: 576px) {
+    line-height: 125%;
+    width: 100%;
+  }
 
   span {
     display: flex;

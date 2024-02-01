@@ -1,12 +1,20 @@
 .about {
-  position: relative;
-  margin-bottom: 70px;
+  margin-bottom: clamp(60px, 4.861vw, 70px);
+  padding: 0 30px;
+
+  @media screen and (max-width: 991px) {
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-bottom: 60px;
+  }
 
   &__bg {
     position: absolute;
     left: 0;
     right: 0;
-    transform: translateY(-20%);
 
     picture,
     img {
@@ -20,34 +28,81 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-gap: 40px;
+    grid-gap: clamp(30px, 5.208vw, 40px);
+
+    @media screen and (max-width: 767px) {
+      padding: 0 10px;
+    }
   }
 
   &__info {
+    position: relative;
     width: 100%;
     background-color: var(--color-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 80px;
-    padding-top: 30px;
+    grid-gap: clamp(10px, 4.167vw, 80px);
+    padding: 30px 20px 0;
+
+    @media screen and (max-width: 1240px) {
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      padding: 50px 20px 0 30px;
+      align-items: initial;
+      grid-gap: clamp(5px, 1.613vw, 20px);
+    }
+
+    @media screen and (max-width: 991px) {
+      border-radius: 0;
+      padding: 50px 20px 0 27px;
+      grid-template-columns: 277px 1fr;
+    }
+
+    @media screen and (max-width: 767px) {
+      background-color: transparent;
+      grid-template-columns: 100%;
+      padding: 0;
+    }
 
     &-image {
       display: flex;
+
+      @media screen and (max-width: 767px) {
+        position: absolute;
+        right: 0;
+      }
     }
 
     &-block {
       max-width: 893px;
       display: flex;
       flex-direction: column;
-      grid-gap: 30px;
+      grid-gap: clamp(15px, 2.083vw, 30px);
+
+      @media screen and (max-width: 1240px) {
+        padding-bottom: 40px;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding: 0;
+      }
     }
 
     &-name {
-      font-size: 46px;
+      font-size: clamp(36px, 2.396vw, 46px);
       line-height: 110%;
       font-weight: 800;
+
+      @media screen and (max-width: 768px) {
+        font-size: clamp(28px, 4.688vw, 36px);
+      }
+
+      @media screen and (max-width: 767px) {
+        max-width: 180px;
+        padding-top: 63px;
+      }
     }
 
     blockquote {
@@ -56,28 +111,47 @@
       margin: 0;
       padding-left: 30px;
 
+      @media screen and (max-width: 991px) {
+        padding: 0 30px;
+      }
+
+      @media screen and (max-width: 767px) {
+        max-width: 180px;
+        padding: 0;
+        padding-left: 20px;
+      }
+
       p {
-        font-size: 18px;
+        font-size: clamp(14px, 1.758vw, 18px);
         line-height: 110%;
+        font-weight: 600;
         font-style: italic;
         color: #000;
 
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+
         &::before {
           position: absolute;
-          content: var(--quote-left);
-          display: inline-block;
+          content: '';
+          background-image: var(--quote-left);
+          background-position: center;
+          background-size: cover;
           top: -5px;
           left: 0;
-          width: 23px;
-          height: 17px;
+          width: clamp(16px, 2.995vw, 23px);
+          height: clamp(12px, 2.214vw, 17px);
         }
 
         &::after {
           position: absolute;
-          content: var(--quote-right);
-          display: inline-block;
-          width: 23px;
-          height: 17px;
+          content: '';
+          background-image: var(--quote-right);
+          background-position: center;
+          background-size: cover;
+          width: clamp(16px, 2.995vw, 23px);
+          height: clamp(12px, 2.214vw, 17px);
           margin-left: 6px;
           bottom: -5px;
         }
@@ -87,13 +161,18 @@
     &-details {
       display: flex;
       flex-direction: column;
-      grid-gap: 15px;
+      grid-gap: clamp(12px, 1.465vw, 15px);
 
       li {
         display: flex;
         align-items: center;
-        grid-gap: 12px;
-        font-size: 18px;
+        grid-gap: clamp(9px, 1.172vw, 12px);
+        font-size: clamp(15px, 1.758vw, 18px);
+        line-height: 110%;
+
+        @media screen and (max-width: 576px) {
+          font-size: 14px;
+        }
       }
 
       span {

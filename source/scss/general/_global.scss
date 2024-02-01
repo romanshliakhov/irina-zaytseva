@@ -5,9 +5,13 @@ body {
   width: 100%;
   position: relative;
   font-family: var(--font-family-mulish);
-  font-size: 17px;
+  font-size: clamp(15px, 1.66vw, 17px);
   line-height: 110%;
   color: var(--color-black);
+
+  @media screen and (max-width: 576px) {
+    font-size: 14px;
+  }
 }
 
 html {
@@ -130,13 +134,18 @@ input[type="number"] {
 
 .container {
   position: relative;
-  max-width: 1400px;
+  max-width: 1560px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(20px, 5.208vw, 100px);
+
+  @media screen and (max-width: 991px) {
+    padding: 0 clamp(10px, 2.604vw, 20px);
+  }
 
   &--fluid {
-    max-width: 1600px;
+    // max-width: 1760px;
+    padding: 0;
   }
 }
 
@@ -149,6 +158,12 @@ svg {
   overflow-y: hidden;
 }
 
+.just-validate-error-label {
+  text-align: center;
+}
 
+.iti__flag {background-image: url("../img/flags.png");}
 
-
+@media (min-resolution: 2x) {
+  .iti__flag {background-image: url("../img/flags@2x.png");}
+}

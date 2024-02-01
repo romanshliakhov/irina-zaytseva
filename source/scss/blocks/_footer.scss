@@ -8,13 +8,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-gap: 78px;
+    flex-wrap: wrap;
+    grid-gap: 15px clamp(50px, 4.167vw, 80px);
+    padding: 0 clamp(10px, 3.906vw, 30px);
+
+    @media screen and (max-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: clamp(10px, 1.953vw, 15px) 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     a {
-      font-size: 17px;
+      font-size: clamp(15px, 1.181vw, 17px);
       line-height: 129%;
       color: var(--color-white);
       transition: all 0.4s ease;
+
+      @media screen and (max-width: 768px) {
+        font-size: clamp(12px, 1.953vw, 15px);
+      }
 
       &:hover {
         color: var(--color-blue);

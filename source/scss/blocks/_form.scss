@@ -1,11 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  grid-gap: 20px;
+  grid-gap: clamp(12px, 2.604vw, 20px);
 
   &__label {
     position: relative;
-    padding: 22px 29px;
+    padding: clamp(18px, 2.148vw, 22px) clamp(20px, 2.832vw, 29px);
     display: flex;
     align-items: center;
     grid-gap: 6px;

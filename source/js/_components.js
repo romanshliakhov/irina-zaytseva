@@ -1,12 +1,7 @@
-// import './components/select.js';
-// import './components/sliders.js';
-// import './components/burger.js';
-// import './components/spollers.js';
-// import './components/mobileMenu.js';
-// import './components/replaceEl.js';
-// import './components/seoBlock.js';
 import './components/timer';
 import './components/phoneMask';
+import './components/intlTel';
+import './components/smoothScroll';
 
 
 

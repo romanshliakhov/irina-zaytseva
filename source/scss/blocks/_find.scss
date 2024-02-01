@@ -1,43 +1,90 @@
 .find {
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: clamp(60px, 4.861vw, 70px);
   z-index: 2;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+
+  .container {
+    @media screen and (max-width: 767px) {
+      padding: 0 10px;
+    }
+  }
 
   &__wrapp {
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-gap: 40px;
-    padding: 0 20px;
+    grid-gap: clamp(24px, 2.778vw, 40px);
   }
 
   &__details {
-    max-width: 1360px;
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 25px 50px;
+    grid-gap: clamp(15px, 3.255vw, 25px) clamp(36px, 2.604vw, 50px);
+
+    @media screen and (max-width: 1240px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 991px) {
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 100%;
+      padding-left: 0;
+    }
   }
 
   &__detail {
+    position: relative;
+    padding: clamp(20px, 2.148vw, 22px) 14px clamp(20px, 2.148vw, 22px) clamp(32px, 3.906vw, 40px);
     display: flex;
     align-items: center;
-    grid-gap: 15px;
-    padding: 22px 14px;
     border: 1px solid var(--color-blue-light);
     background-color: var(--color-white);
     border-radius: 15px;
 
+    @media screen and (max-width: 991px) {
+      padding: 11px 12px 11px clamp(23px, 4.167vw, 32px);
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-left: 10px;
+    }
+
     span {
-      margin-left: -40px;
-      width: 50px;
-      height: 50px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: clamp(-20px, -1.953vw, -20px);
+      width: clamp(30px, 4.883vw, 50px);
+      height: clamp(30px, 4.883vw, 50px);
       border-radius: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
       background-color: var(--color-blue-light);
+
+      @media screen and (max-width: 768px) {
+        svg {
+          width: 80%;
+          height: 80%;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        left: -15px;
+
+        svg {
+          width: 70%;
+          height: 70%;
+        }
+      }
     }
 
     svg {
@@ -51,6 +98,10 @@
 
     &:nth-child(7) {
       margin-right: -94px;
+
+      @media screen and (max-width: 1240px) {
+        margin-right: 0;
+      }
     }
 
     &:last-child {
@@ -61,9 +112,29 @@
       span {
         background-color: var(--color-orange);
       }
+
+      @media screen and (max-width: 1240px) {
+        margin-left: 0;
+        grid-column: initial;
+      }
+
+      @media screen and (max-width: 576px) {
+        margin-top: 15px;
+        padding: 25px 15px 15px;
+        text-align: center;
+
+        span {
+          top: -15px;
+          left: 50%;
+          transform: translateX(-50%),;
+        }
+      }
     }
   }
 
-
-
+  &__btn {
+    @media screen and (max-width: 991px) {
+      margin-top: 16px;
+    }
+  }
 }

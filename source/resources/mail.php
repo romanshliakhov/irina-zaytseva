@@ -38,7 +38,7 @@ try {
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
-  $mail->setFrom('seoshrv@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('sitemailerapp@gmail.com', 'Заявка с вашего сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
   $mail->addAddress('romanshliakhov@gmail.com');

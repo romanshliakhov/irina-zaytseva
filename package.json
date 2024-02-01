@@ -61,6 +61,7 @@
     "gulp-svgstore": "^9.0.0",
     "gulp-to-ico": "^1.0.0",
     "inputmask": "^5.0.7",
+    "intl-tel-input": "^19.2.16",
     "just-validate": "^3.3.3",
     "lottie-web": "^5.9.6",
     "postcss-loader": "^7.3.3",

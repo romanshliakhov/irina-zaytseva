@@ -3,6 +3,16 @@
   flex-direction: column;
   grid-gap: 16px;
 
+  @media screen and (max-width: 1400px) {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-left: 0;
+  }
+
+
   &__info {
     position: relative;
     max-width: 380px;
@@ -16,10 +26,19 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 
+    @media screen and (max-width: 991px) {
+      max-width: 360px;
+      margin-left: 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-left: 0;
+      padding: 8px;
+    }
 
     p {
-      max-width: 250px;
-      font-size: 15px;
+      max-width: clamp(235px, 24.414vw, 250px);
+      font-size: clamp(14px, 1.465vw, 15px);
       color: var(--color-white);
 
       span {
@@ -33,6 +52,13 @@
     position: absolute;
     left: -30px;
     bottom: -10px;
+
+    @media screen and (max-width: 576px) {
+      width: 122px;
+      height: 160px;
+      left: -10px;
+      bottom: -15px;
+    }
   }
 
   &__timer {

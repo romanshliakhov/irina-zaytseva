@@ -5,18 +5,8 @@ export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
-  if (!form) {
-    console.error('Нет такого селектора!');
-    return false;
-  }
-
-  if (!rules) {
-    console.error('Вы не передали правила валидации!');
-    return false;
-  }
-
   if (telSelector) {
-    const inputMask = new Inputmask('+7 (___)___-__-__');
+    const inputMask = new Inputmask();
     inputMask.mask(telSelector);
 
     for (let item of rules) {
@@ -42,6 +32,9 @@ export const validateForms = (selector, rules, afterSend) => {
 
   validation.onSuccess((ev) => {
     let formData = new FormData(ev.target);
+    let formDialCode = document.querySelector('.iti__selected-dial-code').innerText;
+    let currentTel = formData.get('tel');
+    formData.set('tel', formDialCode + currentTel);
 
     let xhr = new XMLHttpRequest();
 
@@ -66,29 +59,34 @@ export const validateForms = (selector, rules, afterSend) => {
 
 const rules1 = [
   {
-      ruleSelector: '.email',
-      rules: [
-          {
-              rule: 'minLength',
-              value: 3,
-              errorMessage: 'The field must contain at least 3 characters'
-          },
-          {
-              rule: 'required',
-              value: true,
-              errorMessage: 'Enter your email!'
-          },
-          {
-              rule: 'email',
-              value: true,
-              errorMessage: 'Enter correct email!'
-          }
-      ]
+    ruleSelector: '.email',
+    rules: [
+        {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'The field must contain at least 3 characters'
+        },
+        {
+            rule: 'required',
+            value: true,
+            errorMessage: 'Enter your email!'
+        },
+        {
+            rule: 'email',
+            value: true,
+            errorMessage: 'Enter correct email!'
+        }
+    ]
   },
 ];
 
 const afterForm = () => {
+  window.location.href = "/thanks.html";
   console.log('Произошла отправка, тут можно писать любые действия');
 };
 
-validateForms('.form', rules1, afterForm);
+if(document.querySelector('.form')) {
+  validateForms('.form', rules1, afterForm);
+}
+
+

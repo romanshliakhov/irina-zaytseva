@@ -18,7 +18,7 @@
     line-height: 100%;
 
     span {
-      font-size: 40px;
+      font-size: clamp(28px, 3.906vw, 3.906vw);
       line-height: 100%;
       font-weight: 800;
       color: var(--color-orange);
@@ -27,7 +27,7 @@
 
   &__divider {
     margin-top: -3px;
-    font-size: 40px;
+    font-size: clamp(28px, 3.906vw, 3.906vw);
     line-height: 110%;
     font-weight: 800;
     color: var(--color-orange);
